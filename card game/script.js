@@ -13,6 +13,41 @@ let Create_2D_Array = function(){
 Create_2D_Array();                                  // call the function
 
 
+let shuffle = function(){
+    shuffled = new Array(30);
+    random = new Array(30);
+    let num1, num2;
+    let different = true;
+    let i = 0;
+    num1 = Math.floor(Math.random() * 3)
+    num2 = Math.floor(Math.random() * 10)
+    random[0] = (num1 + "" + num2);
+    while(i < 30){
+        num1 = Math.floor(Math.random() * 3)
+        num2 = Math.floor(Math.random() * 10)
+        let value = (num1 + "" + num2);
+        for(let index = 0; index< 30; index++){
+            if(value == random[index]){
+                different = false;
+            }
+        }
+        if(different == true){
+            random[i] = value;
+            i++;
+        }
+        
+              
+    }
+    console.log(random);
+   
+}
+    
+
+
+shuffle();
+
+
+
 
 //Development
 //Creating 2d array
