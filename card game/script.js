@@ -17,21 +17,22 @@ let shuffle = function(){
     shuffled = new Array(30);
     random = new Array(30);
     let num1, num2;
-    let different = true;
+    let different = 0;
     let i = 0;
     num1 = Math.floor(Math.random() * 3)
     num2 = Math.floor(Math.random() * 10)
     random[0] = (num1 + "" + num2);
     while(i < 30){
+        different = 0;
         num1 = Math.floor(Math.random() * 3)
         num2 = Math.floor(Math.random() * 10)
         let value = (num1 + "" + num2);
         for(let index = 0; index< 30; index++){
             if(value == random[index]){
-                different = false;
+                different++;
             }
         }
-        if(different == true){
+        if(different == 0){
             random[i] = value;
             i++;
         }
@@ -39,6 +40,7 @@ let shuffle = function(){
               
     }
     console.log(random);
+    
    
 }
     
