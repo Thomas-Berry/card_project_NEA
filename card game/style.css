@@ -1,0 +1,157 @@
+.card1 {
+    width: 200px;
+    height: 300px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+.num1 {
+    width: 700px;
+    margin: 0;
+    position: absolute;
+    top: 53%;
+    left: 30.45%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+.card2 {
+    width: 200px;
+    height: 300px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+.num2 {
+    width: 700px;
+    margin: 0;
+    position: absolute;
+    top: 53%;
+    left: 70.45%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+.container { 
+  height: 920px;
+  position: relative;
+}
+
+.wrapper {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.cardbtn {
+    width: 200px;
+    height: 300px;
+}
+
+/*
+.back_of_card {
+    width: 200px;
+    height: 300px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
