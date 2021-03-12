@@ -12,11 +12,11 @@ let shuffle = function(){
         num = Math.floor(Math.random() * 10);
         value = (colour + "" + num);                
         for(let index = 0; index< 30; index++){
-            if(value == shuffled[index]){           // check to see if number has been used before
+            if(value === shuffled[index]){           // check to see if number has been used before
                 different = false;                  // different set to false to indetify that this is not a new number so don't add it to array
             }
         }
-        if(different == true){
+        if(different === true){
             shuffled[i] = value;                    // if different is still true then it must be a new number so add it to the shuffled array
             i++;                                    // add 1 to i so that a new combination is found and added 30 times
         }              
@@ -30,6 +30,7 @@ let card1 = document.querySelector('.card1');
 let num1 = document.querySelector('.num1');
 let card2 = document.querySelector('.card2');
 let num2 = document.querySelector('.num2');
+let button = document.querySelector('.cardbtn');
 
 let cards = shuffle();
 console.log(cards);
@@ -53,35 +54,61 @@ document.querySelector('.cardbtn').addEventListener('click', function (){
     num2.src = 'images/num_' + number2 + '.png';
     if(colour1 == colour2){
         if(number1 > number2){
-            console.log("player 1 wins");
+            pl1Win(i);
         } else {
-            console.log("player 2 wins");
+            pl2Win(i);
         }
     } else {
         if(colour1 == 0){
             if(colour2==2){
-                console.log("player 1 wins");
+                pl1Win(i);
             } else {
-                console.log("player 1 wins");
+                pl2Win(i);
             }
         } 
         if(colour1 == 1){
             if(colour2 == 0){
-                console.log("player 1 wins");
+                pl1Win(i);
             } else {
-                console.log("player 2 wins");
+                pl2Win(i);
             }
         }
         if(colour1 == 2){
             if(colour2 == 1){
-                console.log("player 1 wins");
+                pl1Win(i);
             } else {
-                console.log("player 2 wins");
+                pl2Win(i);
             }
         }
-    }    
+    }
+    if(i>=28){
+        button.disabled = true;
+        console.log(pl1Cards);
+        console.log(pl2Cards);
+        if(pl1Cards.length > pl2Cards.length){
+            console.log("player 1 has won");
+        } else {
+            console.log("player 2 has won");
+        }
+    }
     i = i+2;    
 })
+let pl1Cards = [];
+let pl1Win = function(index){
+    console.log("player 1 wins");
+    let card1 = (cards[index]);
+    let card2 = (cards[index+1]);
+    pl1Cards.push(card1);
+    pl1Cards.push(card2);
+}
+let pl2Cards = [];
+let pl2Win = function(index){
+    console.log("player 2 wins");
+    let card1 = (cards[index]);
+    let card2 = (cards[index+1]);
+    pl2Cards.push(card1);
+    pl2Cards.push(card2);
+}
             // 0 = black    1=red   2=yellow
 /*var card = document.querySelector('.card');
 card.style.display = 'block';
@@ -93,7 +120,7 @@ card.src = 'image/0.jpg';*/
 });*/
 
                                
-shuffle();                                          // call the functions
+//shuffle();                                          // call the functions
 
 
 
